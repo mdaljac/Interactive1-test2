@@ -1,0 +1,248 @@
+@import 'bourbon/_bourbon.scss'
+
+*
+	margin: 0
+	padding: 0
+
+
+.wrapper
+	max-width: 960px
+	margin: 0 auto
+
+	.logo
+		max-width: 160px
+		color: #dd0000
+		margin: 40px auto
+		text-transform: uppercase
+		font:
+			family: Arial
+			size: 3em
+			weight: normal
+
+	nav
+		.main-nav, .sub-nav, .footer-nav
+			list-style-type: none
+
+			li
+				+display(inline-block)
+
+				a
+					text-decoration: none
+
+		.main-nav
+			border-bottom: 1px solid #cfcfcf
+			text-align: center
+
+			li
+				padding: 15px
+
+				a
+					color: #05345f
+					text-transform: uppercase
+					font:
+						family: Arial
+						size: 0.85em
+						weight: 600
+
+					&.active
+						color: #1880e1
+						border-bottom: 1px solid #1880e1
+
+	.title
+		font:
+			family: Arial
+			weight: normal
+			size: 1.6em
+		color: #05345f
+		text-transform: uppercase
+		text-align: center
+		padding: 50px 0px 25px 0px
+		border-bottom: 3px solid #05345f
+
+	nav
+		.sub-nav
+			border-bottom: 1px solid #05335f
+			margin: 20px 0px
+			+display(flex)
+			+justify-content(space-between)
+
+			li
+				//width: 180px
+				+flex(1)
+				background-color: #1880e1
+				margin-right: 10px
+
+				&:last-child
+					margin-right: 20px
+				a
+					position: relative
+					height: 15px
+					padding: 15px 0px 15px 20px
+					display: block
+					color: white
+					font:
+						family: Arial
+						size: 0.85em
+					+transition()
+
+					&.active
+						color: #1880e1
+						background-color: white
+						text-decoration: underline
+						+border-color(#05335f #05335f null #05335f)
+						+border-width(1px 1px null 1px)
+						+border-style(solid solid null solid)
+						box-shadow: 0px 5px 1px 0px white
+
+						img
+							position: absolute
+							right: 10px
+							top: 50%
+							margin-top: -6px
+
+	.team
+		max-width: 735px
+		float: right
+
+		.member-wrapper
+			display: inline-block
+			margin-left: 20px
+
+			&.inactive-member
+				opacity: 0.7
+				pointer-events: none
+
+			.member
+				color: #1880e1
+				text-decoration: none
+
+				&:hover
+					text-decoration: underline
+
+				.member-name, .member-title
+					display: block
+				.member-title
+					margin-bottom: 20px
+		.member-detail
+			display: none
+			float: right
+			width: 715px
+			border-top: 1px solid #05345f
+			padding: 5px 5px 15px 0px
+			box-sizing: border-box
+			position: relative
+
+			.member-name-title
+				float: left
+				color: #1880e1
+
+				.member-name
+					display: block
+					text-transform: uppercase
+
+			.close
+				cursor: pointer
+				display: inline-block
+				position: absolute
+				bottom: 0
+				left: 0
+				margin-bottom: 15px
+				color: #1880e1
+
+				&:hover
+					text-decoration: underline
+
+			.member-description
+				max-width: 460px
+				float: right
+				color: #05345f
+				font:
+					family: Tahoma
+					size: 14px
+				line-height: 18px
+				text-shadow: 0.05px 0.05px 0.01px #05345f
+
+	.contact
+		clear: both
+		background-color: #e7f2fc
+		padding: 15px 0px 15px 20px
+
+		.contact-paragraph
+			display: inline-block
+			color: #05345f
+			text-shadow: 0.01px 0.01px #05345f
+
+			span
+				margin-left: 20px
+				margin-right: 5px
+
+				select
+					+appearance(none)
+					border: none
+					outline: none
+					background-color: #e7f2fc
+					color: #1880e1
+					text-shadow: 0.01px 0.01px #05345f
+					font-size: 14px
+					background: url('../assets/arrow.png') no-repeat right
+					padding-right: 22px
+
+		.contact-button
+			text-transform: uppercase
+			background-color: #1880e1
+			color: white
+			outline: none
+			border: none
+			width: 120px
+			padding: 10px 0px
+			margin-left: 10px
+			cursor: pointer
+
+	.countries
+		margin-top: 20px
+		text-align: center
+
+		a
+			color: #05345f
+			text-transform: uppercase
+			text-decoration: none
+			text-shadow: 0.01px 0.01px #05345f
+			margin-right: 15px
+			font:
+				family: Tahoma
+				size: 12px
+
+	footer
+		+display(flex)
+		+align-items(center)
+		+justify-content(space-between)
+		margin-top: 40px
+		color: #4897e6
+		text-transform: uppercase
+		font:
+			family: Tahoma
+			size: 10px
+
+		nav
+			.footer-nav
+				+display(flex)
+
+				li
+					display: table
+					margin-right: 10px
+					padding-right: 12px
+					height: 15px
+
+					&:not(:last-child)
+						border-right: 1px solid #4897e6
+					a
+						display: table-cell
+						vertical-align: middle
+						color: #4897e6
+		.connect
+			+display(flex)
+			+align-items(center)
+			margin-bottom: 10px
+			a
+				text-decoration: none
+				margin: 0 5px
